@@ -28,7 +28,7 @@ while epoch < 10:
 
       i = i + 1
 
-    print("Epoch: ", epoch, "Weight: ", w1, "Net: ", net)
+    print("Epoch: ", epoch, "Weight: ", w1, "Net: ", net, "Delta w: ", del_w)
     epoch = epoch + 1
 
 
