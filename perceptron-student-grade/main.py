@@ -3,11 +3,11 @@ import random2
 marks = [20,35,78,91,10,56,79,16]
 grade = [0,0,1,1,0,1,1,0] # supervised training. 0 > Fail and 1 > Pass. Passmark is 50.
 
-w1 = random2.random()
-#w1=1
-n = 0.01
+#w1 = random2.random()
+w1 = 10 # -------------------- increased weight and random disabled
+n = 0.001 # ------------------------ reduced the value of n
 epoch = 0
-while epoch < 10:
+while epoch < 1000: # ----------------- increased the epoch number
 
     i=0
     while i < 8:
