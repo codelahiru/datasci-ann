@@ -5,7 +5,7 @@ grade = [0,0,1,1,0,1,1,0] # supervised training. 0 > Fail and 1 > Pass. Passmark
 
 #w1 = random2.random()
 w1 = 10 # -------------------- increased weight and random disabled
-n = 0.001 # ------------------------ reduced the value of n
+n = 0.001 # ------------------------ reduced the value of n.  n is a small constant value called the 'Eta'   η ( ~ 0.01)
 epoch = 0
 while epoch < 1000: # ----------------- increased the epoch number
 
