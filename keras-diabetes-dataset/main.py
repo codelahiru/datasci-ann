@@ -24,4 +24,10 @@ model.fit(X, Y, epochs=150, batch_size=10, verbose=0)
 _, accuracy = model.evaluate(X, Y)
 print('Accuracy: %.2f' % (accuracy * 100))
 
+#predictions = myANN.predict_classes(data_input)
+predictions = (model.predict(X) > 0.5).astype(int)
+
+for i in range(20):
+  print(Y[i], " ", predictions[i])
+
 
