@@ -13,23 +13,23 @@ test_Y = dataset[615:768, 8]
 
 # Define the Keras model
 model = Sequential()
-model.add(Dense(1, input_dim=8, activation='relu'))
-model.add(Dense(1, activation='relu'))
+model.add(Dense(9, input_dim=8, activation='relu'))
+model.add(Dense(10, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
-model.summary()
+#model.summary()
 
 # Compile the Keras model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Fit the Keras model on the dataset
-model.fit(train_X, train_Y, epochs=150, batch_size=10, verbose=0)
+model.fit(train_X, train_Y, epochs=200, batch_size=10, verbose=0)
 
 # Evaluate the Keras model
 _, accuracy = model.evaluate(train_X, train_Y)
 print('Accuracy: %.2f' % (accuracy * 100))
 
 #predictions = myANN.predict_classes(data_input)
-predictions = (model.predict(test_X) > 0.9).astype(int)
+predictions = (model.predict(test_X) > 0.4).astype(int)
 
 for i in range(20):
   print(test_Y[i], " ", predictions[i])
