@@ -13,8 +13,8 @@ test_Y = dataset[615:768, 8]
 
 # Define the Keras model
 model = Sequential()
-model.add(Dense(120, input_dim=8, activation='relu'))
-model.add(Dense(340, activation='relu'))
+model.add(Dense(15, input_dim=8, activation='relu'))
+model.add(Dense(25, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 model.summary()
 
