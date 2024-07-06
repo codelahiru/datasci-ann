@@ -22,7 +22,7 @@ model.summary()
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Fit the Keras model on the dataset
-model.fit(train_X, train_Y, epochs=200, batch_size=10, verbose=0)
+model.fit(train_X, train_Y, epochs=100, batch_size=32, verbose=0)
 
 # Evaluate the Keras model
 _, accuracy = model.evaluate(train_X, train_Y)
